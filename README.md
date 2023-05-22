@@ -2,6 +2,16 @@
 
 This project is a Folder View application bootstrapped with React Vite TypeScript template.
 
+In this repository, you will find a React component that utilizes recursion to create a file tree. Mantine UI was chosen to expedite the process of styling the components, and Zustand was selected as the state manager.
+
+To ensure effective folder and file management, it is important for the underlying data structure of the file tree to already include unique identifiers for each node. Therefore, the responsibility of assigning IDs to the nodes does not lie with the frontend implementation.
+
+By asigning IDs on the front end in the data structure, I was able to easily implement features such as selecting files, tracking folder open/closed states, and incorporating the "CollapseAll" and "ExpandAll" functionality. Additionally, the IDs provided a straightforward way to determine the parent folder and dynamically add files or subfolders based on the parent's ID.
+
+It is worth noting that while the current implementation focuses on creating the file tree and managing its state, drag and drop functionality has not been included. Implementing drag and drop features can be a complex task, requiring careful implementation and debugging, which may take considerable time.
+
+I made a quick research on 'react-beautiful-dnd' library, which seems to work fine. Or even make a drag and drop feature from scratch, but will take even more time.
+
 ## Getting Started
 
 To run the project locally, follow these steps:
