@@ -85,6 +85,8 @@ const FileControls = () => {
         handleNewFolder={handleNewFolder}
         collapseAll={handleCollapseAll}
         expandAll={expandAll}
+        disableNewFile={!selectedItemFolderId}
+        disableNewFolder={!selectedItemFolderId}
       />
     </Flex>
   );

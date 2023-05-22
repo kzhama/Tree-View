@@ -13,6 +13,8 @@ interface Props {
   handleNewFolder: () => void;
   collapseAll: () => void;
   expandAll: () => void;
+  disableNewFile: boolean;
+  disableNewFolder: boolean;
 }
 
 const ControlIcons: FC<Props> = ({
@@ -20,16 +22,18 @@ const ControlIcons: FC<Props> = ({
   handleNewFolder,
   collapseAll,
   expandAll,
+  disableNewFile,
+  disableNewFolder,
 }) => {
   return (
     <>
       <Tooltip label="Add file">
-        <ActionIcon onClick={handleNewFile}>
+        <ActionIcon onClick={handleNewFile} disabled={disableNewFile}>
           <VscNewFile size={ICONS_SIZE} />
         </ActionIcon>
       </Tooltip>
       <Tooltip label="Add folder">
-        <ActionIcon onClick={handleNewFolder}>
+        <ActionIcon onClick={handleNewFolder} disabled={disableNewFolder}>
           <VscNewFolder size={ICONS_SIZE} />
         </ActionIcon>
       </Tooltip>
