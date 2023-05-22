@@ -27,6 +27,7 @@ const File: FC<Props> = ({ name, itemId, folderId }) => {
       onClick={() => select(itemId, folderId)}
       style={{
         backgroundColor: isSelected ? SELECTED_COLOR : undefined,
+        cursor: "default",
       }}
     >
       <Flex gap="xs" align="center" direction="row">
