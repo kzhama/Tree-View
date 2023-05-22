@@ -4,7 +4,7 @@ import { AiFillFileExclamation } from "react-icons/ai";
 import { useSelectionStore } from "../../../stores/selectionStore";
 
 import { FILE_ICONS } from "../libs/icons-map";
-import { SELECTED_COLOR } from "../../../../../shared/constants/colors";
+import { ITEM_SELECTION_COLOR } from "../../../../../shared/constants/colors";
 import { getFileExtension } from "../helpers/getFileExtension";
 
 interface Props {
@@ -26,7 +26,7 @@ const File: FC<Props> = ({ name, itemId, folderId }) => {
     <div
       onClick={() => select(itemId, folderId)}
       style={{
-        backgroundColor: isSelected ? SELECTED_COLOR : undefined,
+        backgroundColor: isSelected ? ITEM_SELECTION_COLOR : undefined,
         cursor: "default",
       }}
     >

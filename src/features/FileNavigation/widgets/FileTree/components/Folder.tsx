@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Collapse, Flex } from "@mantine/core";
 import { useSelectionStore } from "../../../stores/selectionStore";
 import { FOLDER_ICONS } from "../libs/icons-map";
-import { SELECTED_COLOR } from "../../../../../shared/constants/colors";
+import { ITEM_SELECTION_COLOR } from "../../../../../shared/constants/colors";
 import { useFoldersStore } from "../../../stores/foldersStore";
 
 interface Props extends PropsWithChildren {
@@ -39,7 +39,7 @@ const Folder: FC<Props> = ({ name, folderId, children }) => {
         onClick={handleOnClick}
         style={{
           cursor: "pointer",
-          backgroundColor: isSelected ? SELECTED_COLOR : undefined,
+          backgroundColor: isSelected ? ITEM_SELECTION_COLOR : undefined,
         }}
       >
         <Flex gap="xs" align="center" direction="row">

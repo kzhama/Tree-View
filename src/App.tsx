@@ -9,7 +9,6 @@ function App() {
   const { setFilesStructure } = useProjectFileStructureStore((state) => state);
 
   useEffect(() => {
-    // This is a simulation of an API call, where the file structure comes from BE, and we set it to local state
     setFilesStructure(data);
   }, [setFilesStructure]);
 

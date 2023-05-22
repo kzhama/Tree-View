@@ -6,7 +6,7 @@ import {
   VscCollapseAll,
   VscExpandAll,
 } from "react-icons/vsc";
-import { ICONS_SIZE } from "../../../../../shared/constants/sizes";
+import { ICON_SIZE } from "../../../../../shared/constants/sizes";
 
 interface Props {
   handleNewFile: () => void;
@@ -29,22 +29,22 @@ const ControlIcons: FC<Props> = ({
     <>
       <Tooltip label="Add file">
         <ActionIcon onClick={handleNewFile} disabled={disableNewFile}>
-          <VscNewFile size={ICONS_SIZE} />
+          <VscNewFile size={ICON_SIZE} />
         </ActionIcon>
       </Tooltip>
       <Tooltip label="Add folder">
         <ActionIcon onClick={handleNewFolder} disabled={disableNewFolder}>
-          <VscNewFolder size={ICONS_SIZE} />
+          <VscNewFolder size={ICON_SIZE} />
         </ActionIcon>
       </Tooltip>
       <Tooltip label="Collapse all">
         <ActionIcon onClick={collapseAll}>
-          <VscCollapseAll size={ICONS_SIZE} />
+          <VscCollapseAll size={ICON_SIZE} />
         </ActionIcon>
       </Tooltip>
       <Tooltip label="Expand all">
         <ActionIcon onClick={expandAll}>
-          <VscExpandAll size={ICONS_SIZE} />
+          <VscExpandAll size={ICON_SIZE} />
         </ActionIcon>
       </Tooltip>
     </>
